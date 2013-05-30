@@ -1,0 +1,52 @@
+﻿@functions {
+    // To support the layout classifaction below. Implementing as a razor function because we can, could otherwise be a Func<string[], string, string> in the code block following.
+    string CalcuClassify(string[] zoneNames, string classNamePrefix) {
+        var zoneCounter = 0;
+        var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : "";}).ToArray());
+        return HasText(zoneNumsFilled) ? classNamePrefix + zoneNumsFilled : "";
+    }
+}
+@{
+    /* Global includes for the theme
+    ***************************************************************/
+    Script.Require("ShapesBase");
+    Style.Include("theme.css");
+    Script.Include("http://w.sharethis.com/button/buttons.js");
+    Script.Include("http://coderwall.com/javascripts/jquery.coderwall.js");
+
+	WorkContext.Layout.Sidebar.Add(New.Sidebar(), "5");
+    WorkContext.Layout.Footer.Add(New.Footer(), "5");
+}
+
+<div id="header">
+    <div id="branding">
+        <h1><a href="@Href("~/")">@WorkContext.CurrentSite.SiteName</a></h1>
+        <h5>Alexey Rodiontsev's personal blog</h5>
+    </div>
+    <div id="layout-navigation">
+        @Display(Model.Navigation)
+    </div>
+</div>
+
+<div id="main">
+    <div id="content-wrapper">
+        @if (Model.Messages != null) {
+        <div id="messages">
+            @Display(Model.Messages)
+        </div>
+        }
+        <div id="content">
+            @Display(Model.Content)
+        </div>
+    </div>
+    <div id="sidebar-wrapper">
+        <div id="sidebar">
+            @Display(Model.Sidebar)
+        </div>
+    </div>
+</div>
+<div id="footer-wrapper">
+    <footer>
+        @Display(Model.Footer)
+    </footer>
+</div>

@@ -1,0 +1,13 @@
+﻿@{
+	var homeUrl = Href("~/");
+}
+<div class="credits">
+	<span class="copyright">@T("Copyright © 2011. <a href=\"{0}\" target=\"_blank\">{1}</a>. All rights reserved.",
+        homeUrl,
+		WorkContext.CurrentSite.SiteName)
+    </span>
+	<span class="poweredby">
+        @T("Powered by <a href=\"{0}\" target=\"_blank\">Orchard</a>", "http://www.orchardproject.com") 
+        This is a <strong>CSS3</strong> theme, please use the appropriate browser.
+    </span>
+</div>

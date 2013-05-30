@@ -1,0 +1,179 @@
+/* Reset
+***************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+header, footer, aside, nav, article {
+    display: block;
+}
+
+/* General
+***************************************************************/
+body {
+    font: normal 100% Segoe UI,Trebuchet,Arial,Sans-Serif;
+    height: 100%;
+    text-align: left;
+    color: #000;
+    background: rgb(250, 250, 250);
+}
+
+p {
+    margin-bottom: 1.5882em;
+    line-height: 1.5882em;
+    text-align: justify;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, legend {
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 145%;
+}
+
+h3 {
+    font-size: 130%;
+}
+
+h4 {
+    font-size: 120%;
+}
+
+h5 {
+    font-size: 105%;
+}
+
+a:focus, a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#header {
+    color: #000;
+    width: 100%;
+    height: 80px;
+    min-width: 960px;
+    background: #fff;
+    box-shadow: 0px 0px 5px #ccc;
+    border-bottom: 1px solid #ddd;
+}
+
+#branding {
+    width: 350px;
+    margin-left: 50px;
+    float: left;
+}
+
+#branding h1 {
+    text-transform: capitalize;
+}
+
+#branding h5 {
+    font-style: italic;
+    color: #ccc;
+}
+
+#layout-navigation {
+    margin-right: 50px;
+    float: right;
+}
+
+/* Structure
+***************************************************************/
+
+nav ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul li {
+    display: block;
+    float: left;
+    width: 100px;
+    border-left: 1px solid #eee;
+    height: 80px;
+    text-align: center;
+}
+
+nav ul li.current {
+}
+
+nav ul a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    line-height: 24px;
+    width: 100%;
+}
+
+/* Main
+***************************************************************/
+#main {
+    margin: 0 auto 40px;
+    width: 960px;
+}
+
+.blog-posts {
+    list-style: none;
+}
+
+.blog-post {
+    margin: 20px 0;
+    box-shadow: 0px 0px 5px #ccc;
+    background: #fff;
+    padding: 20px 50px;
+    border: 1px solid #ddd;
+}
+
+strong, .strong {
+    font-weight: bold;
+}
+
+em, dfn, .italic {
+    font-style: italic;
+}
+
+dfn {
+    font-weight: bold;
+}
+
+.blog-posts p.summary {
+    margin: 0;
+}
+
+.blog-posts p.summary p {
+    margin: auto;
+}
+
+.blog-post ul li {
+    list-style-type: disc;
+    margin-left: 1.5941em;
+}
+
+/* Secondary
+***************************************************************/
+
+/* Forms
+***************************************************************/
+
+/* Misc
+***************************************************************/
