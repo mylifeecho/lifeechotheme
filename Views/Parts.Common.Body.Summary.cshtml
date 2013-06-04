@@ -24,4 +24,4 @@
 	var body = new HtmlString(Html.Excerpt(bodyHtml, 2000).ToString().Replace(Environment.NewLine, "</p>" + Environment.NewLine + "<p>")); 
  }
 <p class="summary">@body</p> 
-<span class="more">@Html.ItemDisplayLink(T("more...").ToString(), contentItem)</span>
+<span class="more">@Html.ItemDisplayLink(T("Read more...").ToString(), contentItem)</span>

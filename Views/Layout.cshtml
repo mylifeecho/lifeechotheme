@@ -19,12 +19,14 @@
 }
 
 <div id="header">
-    <div id="branding">
-        <h1><a href="@Href("~/")">@WorkContext.CurrentSite.SiteName</a></h1>
-        <h5>Alexey Rodiontsev's personal blog</h5>
-    </div>
-    <div id="layout-navigation">
-        @Display(Model.Navigation)
+    <div id="header-container">
+        <div id="branding">
+            <h1><a href="@Href("~/")">@WorkContext.CurrentSite.SiteName</a></h1>
+            <h5>Alexey Rodiontsev's personal blog</h5>
+        </div>
+        <div id="layout-navigation">
+            @Display(Model.Navigation)
+        </div>
     </div>
 </div>
 
