@@ -11,10 +11,15 @@
     ***************************************************************/
     Script.Require("ShapesBase");
     Style.Include("theme.css");
+
+    Script.Include("sunlight-all-min.js");
+    Script.Include("jquery.sunlight.js");
+    Style.Include("sunlight.default.css");
+
     Script.Include("http://w.sharethis.com/button/buttons.js");
     Script.Include("http://coderwall.com/javascripts/jquery.coderwall.js");
-
-	WorkContext.Layout.Sidebar.Add(New.Sidebar(), "5");
+    
+    WorkContext.Layout.Sidebar.Add(New.Sidebar(), "5");
     WorkContext.Layout.Footer.Add(New.Footer(), "5");
 }
 
@@ -52,3 +57,10 @@
         @Display(Model.Footer)
     </footer>
 </div>
+@using(Script.Foot()) {
+    <script type="text/javascript">
+        $(function () {
+            Sunlight.highlightAll(); 
+        });
+    </script>
+}
